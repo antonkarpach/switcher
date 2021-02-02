@@ -1,6 +1,7 @@
-import './App.scss';
+import React from "react";
+import "./App.scss";
 import Switcher from "./components/switcher/Switcher";
-import {switchContent, switchLongContent} from "./switchContent";
+import { switchContent, switchLongContent } from "./switchContent";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         </div>
         <div className="app-content-wrapper">
           <h3>Clicked component</h3>
-          <Switcher state/>
+          <Switcher state />
         </div>
         <div className="app-content-wrapper">
           <h3>Component with object of names</h3>
@@ -31,7 +32,7 @@ function App() {
         </div>
         <div className="app-content-wrapper">
           <h3>Component with long content</h3>
-            <Switcher content={switchLongContent} />
+          <Switcher content={switchLongContent} />
         </div>
       </div>
     </div>
