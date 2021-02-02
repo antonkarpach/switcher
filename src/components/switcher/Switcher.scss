@@ -1,0 +1,56 @@
+@import 'src/constants/colors';
+
+.switcher {
+  width: 100%;
+
+  .switcher-tabs {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 35px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 2px solid $WHITE;
+    border-radius: 35px;
+    background: $WHITE;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      border-radius: 35px;
+      content: '';
+      background: $SOFT_GREEN;
+      transition: all 250ms ease-in-out;
+    }
+
+    &.switch::after {
+      left: 50%;
+      background: $SOFT_ROSE;
+    }
+
+    .switcher-tab {
+      position: relative;
+      z-index: 2;
+      display: inline-block;
+      width: 50%;
+      padding: 11px 20px;
+      overflow: hidden;
+      text-align: center;
+      white-space: nowrap;
+      text-transform: uppercase;
+      text-overflow: ellipsis;
+      color: $GREEN;
+      cursor: pointer;
+
+      &-off {
+        color: $ROSE;
+      }
+    }
+  }
+}
